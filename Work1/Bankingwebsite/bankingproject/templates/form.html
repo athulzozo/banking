@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="POST">
+    {% csrf_token %}
+<!--    <input type="text" name="username" placeholder="Enter your username"><br>-->
+    <input type="text" name="name" placeholder="name"><br>
+    <input type="date" id="dob" name="dob"><br>
+    <input type="number" id="age" name="number" placeholder="Enter your age" required><br>
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male"><br>
+
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female"><br>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"><br>
+<!--    <input type="text" name="firstname" placeholder="Enter your Firstname"><br>-->
+<!--    <input type="text" name="lastname" placeholder="Enter your Lastname"><br>-->
+    <input type="email" name="email" placeholder="Enter your E-mail id"><br>
+
+  <label>Address</label><br>
+
+  <label for="street">Street:</label>
+  <input type="text" id="street" name="street" placeholder="Enter your street address" required><br>
+
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city" placeholder="Enter your city" required><br>
+
+  <label for="state">State/Province:</label>
+  <input type="text" id="state" name="state" placeholder="Enter your state or province" required><br>
+
+  <label for="postal">Postal Code:</label>
+  <input type="text" id="postal" name="postal" placeholder="Enter your postal code" required><br>
+
+  <label for="country">Country:</label>
+  <input type="text" id="country" name="country" placeholder="Enter your country" required><br>
+
+   <label for="district">District:</label>
+  <select id="district" name="district" required>
+    <option value="">Select your district</option>
+    <option value="district1">Malappuram</option>
+    <option value="district2">Calicut</option>
+    <option value="district3">Kochi</option>
+    <option value="district3">Thrissur</option>
+    <option value="district3">Thrivandrum</option>
+    <!-- Add more options as needed -->
+  </select>
+    
+    <label for="district">Account Type:</label>
+  <select id="account" name="account" required>
+    <option value="">Select your Account</option>
+    <option value="Account1">Current Account</option>
+    <option value="Account2">Savings</option>
+    <option value="Account3">Business Account</option>
+
+    <!-- Add more options as needed -->
+  </select><br>
+
+
+
+    <input type="checkbox" id="id_credit_card" name="credit_card" value="credit_card">
+    <label for="id_credit_card">Credit Card</label><br>
+
+    <input type="checkbox" id="id_debit_card" name="debit_card" value="debit_card">
+    <label for="id_debit_card">Debit Card</label><br>
+
+    <input type="checkbox" id="id_cheque_book" name="cheque_book" value="cheque_book">
+    <label for="id_cheque_book">Cheque_Book</label><br>
+
+
+<!--</form>-->
+
+
+    <input type="submit">
+
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
